@@ -1,0 +1,804 @@
+
+/* ========================================
+   1. COLOURS AND BASIC SETTINGS
+   ALL-BLUE PASTEL THEME 💙
+======================================== */
+
+:root {
+    --blue: #7db8f5;
+    --dark-blue: #356ca5;
+    --light-blue: #eaf5ff;
+    --pale-blue: #f5faff;
+    --soft-blue: #d7eaff;
+    --mid-blue: #a9d5ff;
+    --deep-blue: #285786;
+    --white: #ffffff;
+    --text: #38516b;
+    --shadow: 0 10px 35px rgba(69, 125, 180, 0.14);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 24px 16px 90px;
+    font-family: "Nunito", sans-serif;
+    color: var(--text);
+    background: linear-gradient(
+        145deg,
+        #e4f2ff 0%,
+        #f4f9ff 50%,
+        #eaf4ff 100%
+    );
+    overflow-x: hidden;
+}
+
+button {
+    font: inherit;
+}
+
+button:focus-visible {
+    outline: 3px solid var(--dark-blue);
+    outline-offset: 4px;
+}
+
+
+/* ========================================
+   2. MAIN WEBSITE AND PAGE TRANSITIONS
+======================================== */
+
+.website {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.page {
+    display: none;
+    width: 100%;
+    animation: fade-in 0.55s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+.card {
+    width: 100%;
+    padding: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================================
+   3. HEADINGS AND TEXT
+======================================== */
+
+h1,
+h2,
+h3,
+p {
+    overflow-wrap: anywhere;
+}
+
+h1 {
+    margin: 0 0 24px;
+    color: var(--dark-blue);
+    font-size: clamp(1.7rem, 5vw, 2.6rem);
+    line-height: 1.25;
+    font-weight: 800;
+}
+
+h2 {
+    margin: 0 0 18px;
+    color: var(--dark-blue);
+    font-size: clamp(1.35rem, 4vw, 2rem);
+    line-height: 1.35;
+}
+
+h3 {
+    color: var(--dark-blue);
+    font-size: 1.45rem;
+    margin: 0 0 14px;
+}
+
+.message {
+    max-width: 580px;
+    margin: 18px auto;
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+.eyebrow {
+    margin: 0 0 12px;
+    color: #6f9bc7;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.handwriting {
+    font-family: "Caveat", cursive;
+    color: #568ac0;
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+.big-handwriting {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+
+
+/* ========================================
+   4. PAGE 1: BIRTHDAY ARTWORK
+======================================== */
+
+.hero-card {
+    padding-top: 38px;
+    padding-bottom: 38px;
+}
+
+.art-image {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    max-height: 65vh;
+    object-fit: contain;
+    margin: 0 auto;
+    border-radius: 18px;
+}
+
+.hero-card .message {
+    margin-top: 24px;
+}
+
+
+/* ========================================
+   5. BUTTONS
+======================================== */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 56px;
+    min-height: 48px;
+    margin-top: 18px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 999px;
+    color: white;
+    background: linear-gradient(
+        135deg,
+        #83bdf8,
+        #5c9ee9,
+        #478bd8
+    );
+    box-shadow: 0 5px 15px rgba(76, 143, 215, 0.22);
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(76, 143, 215, 0.3);
+}
+
+.button:active {
+    transform: scale(0.97);
+}
+
+.text-button {
+    display: block;
+    margin: 22px auto 0;
+    padding: 10px 16px;
+    border: none;
+    background: transparent;
+    color: var(--dark-blue);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.text-button:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   6. PAGE 2: DIGITAL BLUE CAKE
+======================================== */
+
+.cake-card {
+    padding-top: 34px;
+    overflow: hidden;
+}
+
+.cake-scene {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    height: 330px;
+    margin: 28px auto 10px;
+}
+
+.two-tier-cake {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    width: 100%;
+    height: 235px;
+    transform: translateX(-50%);
+}
+
+/* Bottom cake tier */
+
+.bottom-tier {
+    position: absolute;
+    left: 50%;
+    bottom: 23px;
+    width: 90%;
+    height: 135px;
+    transform: translateX(-50%);
+    border-radius: 18px 18px 24px 24px;
+    background: linear-gradient(
+        180deg,
+        #a9d5ff 0%,
+        #7db8f5 70%,
+        #6ba7e9 100%
+    );
+    box-shadow: inset 0 -8px 0 rgba(58, 117, 180, 0.12);
+}
+
+/* Top cake tier */
+
+.top-tier {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: 135px;
+    width: 58%;
+    height: 90px;
+    transform: translateX(-50%);
+    border-radius: 18px 18px 12px 12px;
+    background: linear-gradient(
+        180deg,
+        #d7ecff,
+        #91c6fa
+    );
+    box-shadow: inset 0 -5px 0 rgba(58, 117, 180, 0.1);
+}
+
+/* Blue-white icing */
+
+.top-icing,
+.bottom-icing {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    border-radius: 18px 18px 10px 10px;
+    background: #f4faff;
+}
+
+.top-icing::after,
+.bottom-icing::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 12%;
+    width: 12px;
+    height: 17px;
+    border-radius: 0 0 10px 10px;
+    background: #f4faff;
+    box-shadow:
+        45px 3px 0 #f4faff,
+        95px -1px 0 #f4faff;
+}
+
+.bottom-icing::after {
+    left: 10%;
+    box-shadow:
+        65px 3px 0 #f4faff,
+        140px -1px 0 #f4faff;
+}
+
+/* Blue heart decorations */
+
+.tier-heart {
+    position: absolute;
+    color: #397fc2;
+    font-size: 24px;
+}
+
+.heart-one {
+    top: 34px;
+    left: 25%;
+}
+
+.heart-two {
+    top: 34px;
+    right: 25%;
+}
+
+.heart-three {
+    top: 52px;
+    left: 24%;
+}
+
+.heart-four {
+    top: 52px;
+    right: 24%;
+}
+
+/* Tiny white-blue decorations */
+
+.tier-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #f4faff;
+}
+
+.dot-one {
+    left: 48%;
+    top: 43px;
+}
+
+.dot-two {
+    left: 68%;
+    top: 57px;
+}
+
+.dot-three {
+    left: 47%;
+    top: 68px;
+}
+
+.dot-four {
+    left: 70%;
+    top: 85px;
+}
+
+/* Cake plate */
+
+.cake-plate {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    bottom: 9px;
+    width: 100%;
+    height: 23px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: linear-gradient(
+        180deg,
+        #ffffff,
+        #c5e1fb
+    );
+    box-shadow: 0 6px 10px rgba(55, 101, 147, 0.12);
+}
+
+
+/* ========================================
+   7. CANDLES AND FLAMES
+======================================== */
+
+.candles {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: clamp(8px, 3vw, 20px);
+    width: 100%;
+    transform: translateX(-50%);
+}
+
+.candle {
+    position: relative;
+    width: 36px;
+    height: 100px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.candle-stick {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 15px;
+    height: 65px;
+    transform: translateX(-50%);
+    border-radius: 4px 4px 2px 2px;
+    background: repeating-linear-gradient(
+        135deg,
+        #79b5f0 0,
+        #79b5f0 6px,
+        #eaf5ff 6px,
+        #eaf5ff 12px
+    );
+    box-shadow: inset -3px 0 0 rgba(45, 94, 145, 0.12);
+}
+
+.wick {
+    position: absolute;
+    z-index: 2;
+    bottom: 64px;
+    left: 50%;
+    width: 3px;
+    height: 8px;
+    transform: translateX(-50%);
+    border-radius: 3px;
+    background: #4c5260;
+}
+
+/* Soft icy-blue flames */
+
+
+/* ========================================
+   ORIGINAL WARM CANDLE FLAMES 🔥
+======================================== */
+
+.flame {
+    position: absolute;
+    z-index: 3;
+    bottom: 70px;
+    left: 50%;
+    width: 18px;
+    height: 28px;
+    transform: translateX(-50%);
+    transform-origin: center bottom;
+    border-radius: 50% 50% 45% 45%;
+
+    /* Original yellow, orange and golden-red flame */
+    background: radial-gradient(
+        ellipse at 50% 70%,
+        #fff8b7 0%,
+        #ffd45f 38%,
+        #ff9b52 72%,
+        #ff7b63 100%
+    );
+
+    /* Warm golden glow */
+    box-shadow: 0 0 14px rgba(255, 190, 84, 0.55);
+
+    animation: flicker 0.8s infinite alternate ease-in-out;
+}
+
+.candle:nth-child(even) .flame {
+    animation-delay: 0.25s;
+}
+
+.candle.blown .flame {
+    display: none;
+}
+
+.candle.blown .wick {
+    background: #777777;
+}
+
+@keyframes flicker {
+    from {
+        transform: translateX(-50%) rotate(-4deg) scale(1);
+    }
+
+    to {
+        transform: translateX(-50%) rotate(4deg) scale(1.08);
+    }
+}
+
+
+
+/* ========================================
+   8. CELEBRATION AFTER THE CANDLES
+======================================== */
+
+.celebration {
+    margin: 28px auto 0;
+    padding: 24px 20px;
+    border: 1px solid #cfe5fc;
+    border-radius: 22px;
+    background: linear-gradient(
+        145deg,
+        #eaf5ff,
+        #f7fbff
+    );
+    animation: fade-in 0.7s ease;
+}
+
+.celebration .message {
+    font-size: 0.96rem;
+}
+
+
+/* ========================================
+   9. PAGE 3: THE 100 REASONS
+======================================== */
+
+.love-card {
+    padding: 34px 28px;
+}
+
+.reasons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 28px 0;
+    text-align: left;
+}
+
+
+.reason {
+    min-width: 0;
+    padding: 14px 16px;
+    border: 1px solid #d8eaff;
+    border-radius: 15px;
+    background: linear-gradient(
+        145deg,
+        #f1f8ff,
+        #eaf4ff
+    );
+}
+
+
+.reason p {
+    margin: 0;
+    font-size: 0.94rem;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+}
+
+/* Final birthday message */
+
+.final-message {
+    margin: 36px 0 12px;
+    padding: 28px 20px;
+    border: 1px solid #d7eaff;
+    border-radius: 22px;
+    background: linear-gradient(
+        135deg,
+        #e5f3ff,
+        #f4f9ff
+    );
+}
+
+.final-message p {
+    line-height: 1.8;
+}
+
+.tiny-note {
+    margin-top: 24px;
+    color: #7898b9;
+    font-size: 0.8rem;
+}
+
+
+/* ========================================
+   10. PAGE PROGRESS DOTS
+======================================== */
+
+.page-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 26px auto 0;
+}
+
+.dot {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #c6dff5;
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.dot.active-dot {
+    transform: scale(1.35);
+    background: #5797dc;
+}
+
+
+/* ========================================
+   11. ALL-BLUE CONFETTI
+======================================== */
+
+.confetti {
+    position: fixed;
+    z-index: 9999;
+    top: -25px;
+    pointer-events: none;
+    border-radius: 2px;
+    animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-20px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+
+/* ========================================
+   12. PHONE AND TABLET RESPONSIVENESS
+======================================== */
+
+@media (max-width: 600px) {
+    body {
+        padding: 14px 10px 70px;
+    }
+
+    .card {
+        padding: 26px 18px;
+        border-radius: 22px;
+    }
+
+    .hero-card {
+        padding-top: 28px;
+        padding-bottom: 28px;
+    }
+
+    .art-image {
+        max-height: 65vh;
+        border-radius: 14px;
+    }
+
+    .message {
+        font-size: 0.94rem;
+        line-height: 1.75;
+    }
+
+    .cake-card {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .cake-scene {
+        max-width: 350px;
+        height: 300px;
+    }
+
+    .two-tier-cake {
+        bottom: 12px;
+        transform: translateX(-50%) scale(0.88);
+        transform-origin: center bottom;
+    }
+
+    .candles {
+        gap: 8px;
+    }
+
+    .candle {
+        width: 32px;
+        height: 90px;
+    }
+
+    .candle-stick {
+        height: 58px;
+    }
+
+    .wick {
+        bottom: 57px;
+    }
+
+    .flame {
+        bottom: 63px;
+    }
+
+    .reasons {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .reason {
+        padding: 13px 15px;
+    }
+
+    .reason p {
+        font-size: 0.93rem;
+    }
+
+    .final-message {
+        padding: 24px 16px;
+    }
+
+    .button {
+        min-height: 46px;
+        padding: 12px 22px;
+    }
+}
+
+
+/* ========================================
+   13. EXTRA SMALL PHONES
+======================================== */
+
+@media (max-width: 380px) {
+    body {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+
+    .card {
+        padding: 22px 13px;
+    }
+
+    .cake-scene {
+        height: 270px;
+    }
+
+    .two-tier-cake {
+        transform: translateX(-50%) scale(0.76);
+    }
+
+    .candles {
+        gap: 4px;
+    }
+
+    .candle {
+        width: 29px;
+    }
+
+    .celebration {
+        padding: 20px 13px;
+    }
+}
+
+
+/* ========================================
+   14. ACCESSIBILITY: REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

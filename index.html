@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday!</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="website">
+
+        <!-- PAGE 1: BIRTHDAY ARTWORK -->
+        <section class="page active" id="page1">
+            <div class="card hero-card">
+
+                <h1>to my dear beloved Anagha!</h1>
+
+                <img
+                    src="images/my-drawing.jpeg"
+                    alt="My birthday drawing for you"
+                    class="art-image"
+                >
+
+                <p class="message">
+                    Happy birthday my love! May this day bring you
+                    joy, happiness, peace and love. Enjoy your day
+                    and thank you for being born! Thank you for being
+                    a part of my life! MAY GOD BLESS YOU ABUNDANTLY!
+                </p>
+
+                <button class="button" onclick="goToPage(2)">
+                    →
+                </button>
+
+            </div>
+        </section>
+
+
+        <!-- PAGE 2: BLOW OUT THE CANDLES -->
+        <section class="page" id="page2">
+            <div class="card cake-card">
+
+                <h2>love, tap each candle to blow it out</h2>
+
+                <p class="message">
+                    asli cake nhi hai but digital wala hai hehe
+                </p>
+
+                <div class="cake-scene">
+
+                    <!-- FIVE CANDLES -->
+                    <div class="candles" id="candles">
+
+                        <button class="candle"
+                            aria-label="Blow out candle 1"
+                            aria-pressed="false"
+                            onclick="blowCandle(this)">
+                            <span class="flame"></span>
+                            <span class="wick"></span>
+                            <span class="candle-stick"></span>
+                        </button>
+
+                        <button class="candle"
+                            aria-label="Blow out candle 2"
+                            aria-pressed="false"
+                            onclick="blowCandle(this)">
+                            <span class="flame"></span>
+                            <span class="wick"></span>
+                            <span class="candle-stick"></span>
+                        </button>
+
+                        <button class="candle"
+                            aria-label="Blow out candle 3"
+                            aria-pressed="false"
+                            onclick="blowCandle(this)">
+                            <span class="flame"></span>
+                            <span class="wick"></span>
+                            <span class="candle-stick"></span>
+                        </button>
+
+                        <button class="candle"
+                            aria-label="Blow out candle 4"
+                            aria-pressed="false"
+                            onclick="blowCandle(this)">
+                            <span class="flame"></span>
+                            <span class="wick"></span>
+                            <span class="candle-stick"></span>
+                        </button>
+
+                        <button class="candle"
+                            aria-label="Blow out candle 5"
+                            aria-pressed="false"
+                            onclick="blowCandle(this)">
+                            <span class="flame"></span>
+                            <span class="wick"></span>
+                            <span class="candle-stick"></span>
+                        </button>
+
+                    </div>
+
+                    <!-- TWO-TIER BLUE CAKE -->
+                    <div class="two-tier-cake">
+
+                        <div class="top-tier">
+                            <div class="top-icing"></div>
+
+                            <span class="tier-heart heart-one">♥</span>
+                            <span class="tier-heart heart-two">♥</span>
+
+                            <span class="tier-dot dot-one"></span>
+                            <span class="tier-dot dot-two"></span>
+                        </div>
+
+                        <div class="bottom-tier">
+                            <div class="bottom-icing"></div>
+
+                            <span class="tier-heart heart-three">♥</span>
+                            <span class="tier-heart heart-four">♥</span>
+
+                            <span class="tier-dot dot-three"></span>
+                            <span class="tier-dot dot-four"></span>
+                        </div>
+
+                        <div class="cake-plate"></div>
+
+                    </div>
+                </div>
+
+                <!-- CANDLE PROGRESS -->
+                <p id="candle-message" class="message" aria-live="polite">
+                    5 candles left! 
+                </p>
+
+                <!-- BIRTHDAY BLESSING AFTER ALL CANDLES ARE BLOWN OUT -->
+                <div id="celebration" class="celebration" hidden>
+
+                   
+
+                    <p class="message">
+                        May all your wishes come true! May this year
+                        bring you clarity, success, prosperity, health
+                        and opportunities! May His Will be done!
+                    </p>
+
+                    <p class="message">
+                        "The LORD bless you and keep you; the LORD make
+                        His face shine on you and be gracious to you;
+                        the LORD turn His face toward you and give you
+                        peace." <br> Numbers 6:24-26
+                    </p>
+
+                    <button class="button" onclick="goToPage(3)">
+                        →
+                    </button>
+
+                </div>
+
+                <!-- RESET CANDLES -->
+                <button class="text-button"
+                    id="reset-cake"
+                    onclick="resetCake()">
+                    Light the candles again ↻
+                </button>
+
+            </div>
+        </section>
+
+
+        <!-- PAGE 3: 100 THINGS I LOVE ABOUT YOU -->
+        <section class="page" id="page3">
+            <div class="card love-card">
+
+                <p class="eyebrow">A LIST THAT COULD NEVER END</p>
+
+                <h2> things i love about you</h2>
+
+                <!-- JavaScript fills this section with the 100 reasons -->
+                <div class="reasons" id="reasons"></div>
+
+                <!-- FINAL BIRTHDAY MESSAGE -->
+                <div class="final-message">
+
+                   
+
+                    <p>
+                        i appreciate you so much for each and every single thing you've done ever! I LOVE YOU SO MUCH! 
+                        i'm so thankful to YHWH i got to know you, love you and be with you.
+                    </p>
+
+                    <p class="handwriting big-handwriting">
+                        happy birthday, sweetheart!
+                    </p>
+
+                   
+
+                </div>
+
+                <button class="button" onclick="startAgain()">
+                    restart
+                </button>
+
+                <p class="tiny-note">
+                 with love, suchitra.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- THREE PAGE PROGRESS DOTS -->
+        <nav class="page-dots" aria-label="Website progress">
+            <span class="dot active-dot" id="dot1"></span>
+            <span class="dot" id="dot2"></span>
+            <span class="dot" id="dot3"></span>
+        </nav>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
